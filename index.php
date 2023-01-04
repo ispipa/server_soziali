@@ -12,7 +12,7 @@
         if(var_dump(new conexion)) {
             echo "Conexion exitosa!!";
         } else {
-            echo "Conexion fallida";
+            echo "Conexion fallida!!";
         }
     ?>
 </body>
