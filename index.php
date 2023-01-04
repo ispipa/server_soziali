@@ -9,7 +9,7 @@
 <body>
     <?php require ("./clases/conexion/conexion.php");?>
     <?php
-        if(var_dump(new conexion)) {
+        if(new conexion) {
             echo "Conexion exitosa!!";
         } else {
             echo "Conexion fallida!!";
