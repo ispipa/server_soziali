@@ -8,6 +8,12 @@
 </head>
 <body>
     <?php require ("./clases/conexion/conexion.php");?>
-    <?php var_dump(new conexion);?>
+    <?php
+        if(var_dump(new conexion)) {
+            echo "Conexion exitosa";
+        } else {
+            echo "Conexion fallida";
+        }
+    ?>
 </body>
 </html>
