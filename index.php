@@ -9,11 +9,7 @@
 <body>
     <?php require ("./clases/conexion/conexion.php");?>
     <?php
-        if(new conexion) {
             echo "Conexion exitosa!!";
-        } else {
-            echo "Conexion fallida!!";
-        }
     ?>
 </body>
 </html>
