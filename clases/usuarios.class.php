@@ -72,8 +72,7 @@ class usuarios extends conexion
                 $this->user_email = $datos['email'];
                 $query_username = "SELECT nombre FROM usuarios  where nombre='$this->user_name'";
                 $resp_name = parent::nonQuery($query_username);
-                return $resp_name;
-                /*if($resp_name == 0){
+                if($resp_name == 0){
                     $resp = $this->modifyUser($datos['img']);
                     if(isset($resp)){
                         $response['result'] = $this->obtenerDatos2($this->usuarioId);
@@ -86,7 +85,7 @@ class usuarios extends conexion
                 else{
                     http_response_code(403);
                     return array("code" => "5");//El nombre ya esta en uso
-                }*/
+                }
             }
         }
         //modificacion del usuario
@@ -95,10 +94,11 @@ class usuarios extends conexion
             $response = ["user"=>"" , "img" => ""];
             $query ="UPDATE ".$this->table . " SET nombre='" . $this->user_name . "',password='" . $this->user_password . "',email='" . $this->user_email ."' where id='" . $this->usuarioId ."'";
             $resp = parent::nonQuery($query);
-            $resp_img = (new img())->insertImage($img,$this->usuarioId,false);
+            return $resp;
+            /*$resp_img = (new img())->insertImage($img,$this->usuarioId,false);
             $response["user"] = $resp;
             $response["img"] = $resp_img;
-            return $response;
+            return $response;*/
 
         }
         //alta a un usuario
