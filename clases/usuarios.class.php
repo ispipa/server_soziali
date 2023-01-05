@@ -72,7 +72,8 @@ class usuarios extends conexion
                 $this->user_email = $datos['email'];
                 $query_username = "SELECT nombre FROM usuarios  where nombre='$this->user_name'";
                 $resp_name = parent::nonQuery($query_username);
-                if($resp_name == 0){
+                return $resp_name;
+                /*if($resp_name == 0){
                     $resp = $this->modifyUser($datos['img']);
                     if(isset($resp)){
                         $response['result'] = $this->obtenerDatos2($this->usuarioId);
@@ -85,7 +86,7 @@ class usuarios extends conexion
                 else{
                     http_response_code(403);
                     return array("code" => "5");//El nombre ya esta en uso
-                }
+                }*/
             }
         }
         //modificacion del usuario
