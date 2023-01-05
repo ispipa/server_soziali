@@ -94,7 +94,7 @@ class usuarios extends conexion
             $response = ["user"=>"" , "img" => ""];
             $query ="UPDATE ".$this->table . " SET nombre='" . $this->user_name . "',password='" . $this->user_password . "',email='" . $this->user_email ."' where id='" . $this->usuarioId ."'";
             $resp = parent::nonQuery($query);
-            $resp_img = (new img())->insertImage($img,$this->usuarioId);
+            $resp_img = (new img())->insertImage($img,$this->usuarioId,false);
             $response["user"] = $resp;
             $response["img"] = $resp_img;
             return $response;
