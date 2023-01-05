@@ -29,7 +29,7 @@ class usuarios extends conexion
         {
             $query = "SELECT nombre,email,imagenes.img FROM usuarios 
                       left join imagenes on usuarios.id = imagenes.usuarios_id where usuarios.id='$id'";
-            return parent::obtenerDatos2($query);
+            return parent::obtenerDatos($query);
         }
 
         public function post($json)
