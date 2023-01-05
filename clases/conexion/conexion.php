@@ -38,6 +38,16 @@ class conexion
          }
          return $resultArray;
      }
+    public function obtenerDatos2($sqlstr)
+    {
+        $results = $this->conexion->query($sqlstr);
+        $resultArray = array();
+        foreach ($results as $key)
+        {
+            $resultArray[] = $key;
+        }
+        return $resultArray;
+    }
 
     private function datosConexion()
     {
