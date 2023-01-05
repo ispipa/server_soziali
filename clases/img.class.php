@@ -16,7 +16,7 @@ class img extends conexion
         if($bool){
             return $this->img;
         }
-        $query_username = "SELECT usuarios_id FROM " . $this->table . " where usuarios_id='$this->usuarios_id'";
+        $query_username = "SELECT usuarios_id FROM imagenes  where usuarios_id='$this->usuarios_id'";
         $resp_name = parent::nonQuery($query_username);
         return $resp_name;
         /*if($resp_name == 0){
