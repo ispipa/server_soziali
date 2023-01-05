@@ -75,7 +75,7 @@ class usuarios extends conexion
                 if($resp_name == 0){
                     $resp = $this->modifyUser($datos['img']);
                     if(isset($resp)){
-                        $response['result'] = $this->obtenerDatos2($this->usuarioId);
+                        $response['result'] = $this->obtenerUsuario($this->usuarioId);
                         return  $response;
                     }
                     else{
