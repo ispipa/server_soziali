@@ -18,15 +18,14 @@ class img extends conexion
         }
         $query_username = "SELECT usuarios_id FROM imagenes  where usuarios_id='$this->usuarios_id'";
         $resp_name = parent::nonQuery($query_username);
-        return $resp_name;
-        /*if($resp_name == 0){
+        if($resp_name == 0){
             $query = "INSERT INTO ".$this->table . "(usuarios_id,img) values('" . $this->usuarios_id . "','" . $this->img . "')";
             $resp = parent::nonQueryId($query,0);
         }
         else if($resp_name == 1){
             $resp = $this->updateImg();
         }
-        return $resp;*/
+        return $resp;
     }
 
     public function updateImg(){

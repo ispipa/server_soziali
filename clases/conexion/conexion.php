@@ -38,22 +38,7 @@ class conexion
          }
          return $resultArray;
      }
-    public function obtenerDatos2($sqlstr)
-    {
-        try{
-            $results = $this->conexion->query($sqlstr);
-            $resultArray = array();
-            foreach ($results as $key)
-            {
-                $resultArray[] = $key;
-            }
-            return $resultArray;
-        }
-        catch (Exception $e)
-        {
-            return $e->getMessage();
-        }
-    }
+   
 
     private function datosConexion()
     {
