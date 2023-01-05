@@ -70,7 +70,7 @@ class usuarios extends conexion
                 $this->user_name = $datos['nombre'];
                 $this->user_password = $datos['password'];
                 $this->user_email = $datos['email'];
-                $query_username = "SELECT nombre FROM " . $this->table . " where nombre='$this->user_name'";
+                $query_username = "SELECT nombre FROM usuarios  where nombre='$this->user_name'";
                 $resp_name = parent::nonQuery($query_username);
                 if($resp_name == 0){
                     $resp = $this->modifyUser($datos['img']);
