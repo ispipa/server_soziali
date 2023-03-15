@@ -3,7 +3,7 @@
     "conexion":{
         "server" : "containers-us-west-119.railway.app",
         "user" : "root",
-        "password" : "UrN6TUqaqNBQyERu3Xgw",
+        "password" : "sbySdmlPtIfZGDNeO0s3",
         "database" : "railway",
         "port": "5690"
     }
